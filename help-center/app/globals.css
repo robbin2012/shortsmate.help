@@ -1,0 +1,25 @@
+/* 全局样式 */
+
+/* 控制所有内容区域图片的大小 */
+article img,
+article img[src*="/images/training/"] {
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 针对竖版图片的样式 - 限制更小的宽度 */
+article img[alt*="案例"],
+article img[alt*="竖"],
+article img[src*="image_7.png"],
+article img[src*="image_8.png"],
+article img[src*="image_9.png"],
+article img[src*="image_10.png"],
+article img[src*="image_11.png"],
+article img[src*="image_13.png"] {
+  max-width: 500px;
+  height: auto;
+}
