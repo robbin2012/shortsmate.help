@@ -4,6 +4,9 @@ const meta = {
   guides: {
     title: "使用指南",
   },
+  cases: {
+    title: "用户案例",
+  },
   system: {
     title: "系统介绍",
   },
