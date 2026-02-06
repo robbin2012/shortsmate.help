@@ -4,16 +4,60 @@
 
 ---
 
+<div dangerouslySetInnerHTML={{__html: `
+<style>
+  table {
+    border-collapse: collapse;
+    border: 1px solid #e5e7eb;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  table th, table td {
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+  }
+  @media (max-width: 768px) {
+    table {
+      max-width: 100%;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table th:nth-child(2), table td:nth-child(2) {
+      display: none;
+    }
+    table tbody tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    table tbody td {
+      display: block;
+      padding: 8px 0;
+      border: none;
+    }
+    table tbody td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+      color: #374151;
+    }
+  }
+</style>
+`}} />
+
 **快速跳转：**
 
-- [企业站点](#企业站点)
-  - [案例一：企业站点新闻模块图](#案例一：企业站点新闻模块图)
-  - [案例二：企业站点Banner图](#案例二：企业站点banner图)
-- [广告宣传](#广告宣传)
-  - [案例三：新年海报图](#案例三：新年海报图)
-  - [案例四：产品宣传海报](#案例四：产品宣传海报)
-    - [效果图1](#效果图1)
-    - [效果图2](#效果图2)
+- [案例一：企业站点新闻模块图](#案例一：企业站点新闻模块图)
+- [案例二：企业站点Banner图](#案例二：企业站点Banner图)
+- [案例三：新年海报图](#案例三：新年海报图)
+- [案例四：产品宣传海报](#案例四：产品宣传海报)
+  - [效果图1](#效果图1)
+  - [效果图2](#效果图2)
 
 ---
 
@@ -21,17 +65,25 @@
 
 ### 案例一：企业站点新闻模块图
 
-| 原始图片 | 提示词 | 效果图 |
-|:-------:|:------:|:------:|
-| <img src="/images/cases/case1_original_1.jpg" style={{maxWidth: '280px'}} /> | 建筑物变清晰，天空要有淡蓝色渐变，广州市花木棉花要漂亮一点，右边空白要加上一些广州市花（木棉花），后面会有一些建筑，建筑大部分被木棉花树挡住不要太明显，画面要符合透视原理；9:16 | <img src="/images/cases/case1_result_1.jpg" style={{maxWidth: '400px'}} /> |
+| 原始图片 | → | 效果图 |
+|:-------:|:---:|
+| <img src="/images/cases/case1_original_1.jpg" style={{maxWidth: '280px'}} /> | <span style={{fontSize: '24px', color: '#6b7280'}}>→</span> | <img src="/images/cases/case1_result_1.jpg" style={{maxWidth: '400px'}} /> |
+
+<div style={{backgroundColor: '#f3f4f6', padding: '12px 16px', borderRadius: '8px', marginTop: '16px'}}>
+
+**提示词：** 建筑物变清晰，天空要有淡蓝色渐变，广州市花木棉花要漂亮一点，右边空白要加上一些广州市花（木棉花），后面会有一些建筑，建筑大部分被木棉花树挡住不要太明显，画面要符合透视原理；9:16
 
 ---
 
 ### 案例二：企业站点Banner图
 
-| 原始图片 | 提示词 | 效果图 |
-|:-------:|:------:|:------:|
-| <img src="/images/cases/case2_original_1.jpg" style={{maxWidth: '320px'}} /> | 将图片内容进行建筑物远景视角的自然扩充，扩充后比例为16:9 | <img src="/images/cases/case2_result_1.jpg" style={{maxWidth: '480px'}} /> |
+| 原始图片 | → | 效果图 |
+|:-------:|:---:|
+| <img src="/images/cases/case2_original_1.jpg" style={{maxWidth: '320px'}} /> | <span style={{fontSize: '24px', color: '#6b7280'}}>→</span> | <img src="/images/cases/case2_result_1.jpg" style={{maxWidth: '480px'}} /> |
+
+<div style={{backgroundColor: '#f3f4f6', padding: '12px 16px', borderRadius: '8px', marginTop: '16px'}}>
+
+**提示词：** 将图片内容进行建筑物远景视角的自然扩充，扩充后比例为16:9
 
 ---
 
@@ -39,9 +91,13 @@
 
 ### 案例三：新年海报图
 
-| 原始图片 | 提示词 | 效果图 |
-|:-------:|:------:|:------:|
-| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case3_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case3_original_2.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case3_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | 一张中国新年海报，一家人在吃火锅，妈妈夹起一个饺子给小朋友，大家脸上洋溢着幸福的微笑，画面还要加多一些中国过年的元素，然后画面近景需要展示产品图片 | <img src="/images/cases/case3_result_1.png" style={{maxWidth: '380px'}} /> |
+| 原始图片 | → | 效果图 |
+|:-------:|:---:|
+| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case3_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case3_original_2.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case3_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | <span style={{fontSize: '24px', color: '#6b7280'}}>→</span> | <img src="/images/cases/case3_result_1.png" style={{maxWidth: '380px'}} /> |
+
+<div style={{backgroundColor: '#f3f4f6', padding: '12px 16px', borderRadius: '8px', marginTop: '16px'}}>
+
+**提示词：** 一张中国新年海报，一家人在吃火锅，妈妈夹起一个饺子给小朋友，大家脸上洋溢着幸福的微笑，画面还要加多一些中国过年的元素，然后画面近景需要展示产品图片
 
 ---
 
@@ -49,16 +105,24 @@
 
 #### 效果图1
 
-| 原始图片 | 提示词 | 效果图 |
-|:-------:|:------:|:------:|
-| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case4_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case4_original_2.jpg" style={{maxWidth: '220px'}} /> <img src="/images/cases/case4_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | 一张年轻人在露营的海报，需要人物在使用产品场景，另外产品放在旁边的，还要帮我细化露营场景的一些细节 | <img src="/images/cases/case4_result_1.png" style={{maxWidth: '380px'}} /> |
+| 原始图片 | → | 效果图 |
+|:-------:|:---:|
+| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case4_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case4_original_2.jpg" style={{maxWidth: '220px'}} /> <img src="/images/cases/case4_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | <span style={{fontSize: '24px', color: '#6b7280'}}>→</span> | <img src="/images/cases/case4_result_1.png" style={{maxWidth: '380px'}} /> |
+
+<div style={{backgroundColor: '#f3f4f6', padding: '12px 16px', borderRadius: '8px', marginTop: '16px'}}>
+
+**提示词：** 一张年轻人在露营的海报，需要人物在使用产品场景，另外产品放在旁边的，还要帮我细化露营场景的一些细节
 
 ---
 
 #### 效果图2
 
-| 原始图片 | 提示词 | 效果图 |
-|:-------:|:------:|:------:|
-| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case4_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case4_original_2.jpg" style={{maxWidth: '220px'}} /> <img src="/images/cases/case4_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | 一张年轻人在露营的海报，需要人物在使用产品场景，另外产品放在旁边的，还要帮我细化露营场景的一些细节 | <img src="/images/cases/case4_result_2.png" style={{maxWidth: '380px'}} /> |
+| 原始图片 | → | 效果图 |
+|:-------:|:---:|
+| <div style={{display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center'}}> <img src="/images/cases/case4_original_1.png" style={{maxWidth: '220px', border: 'none'}} /> <img src="/images/cases/case4_original_2.jpg" style={{maxWidth: '220px'}} /> <img src="/images/cases/case4_original_3.png" style={{maxWidth: '220px', border: 'none'}} /> </div> | <span style={{fontSize: '24px', color: '#6b7280'}}>→</span> | <img src="/images/cases/case4_result_2.png" style={{maxWidth: '380px'}} /> |
+
+<div style={{backgroundColor: '#f3f4f6', padding: '12px 16px', borderRadius: '8px', marginTop: '16px'}}>
+
+**提示词：** 一张年轻人在露营的海报，需要人物在使用产品场景，另外产品放在旁边的，还要帮我细化露营场景的一些细节
 
 ---
